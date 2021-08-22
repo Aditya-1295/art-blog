@@ -1,5 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const multer = require("multer");
+const ejs = require("ejs");
+const path = require("path");
 
 const app = express();
 
@@ -19,6 +22,10 @@ app.get("/about",function(req,res){
 
 app.get("/contact",function(req,res){
     res.render("contact")
+})
+
+app.get("/upload",function(req,res){
+    res.render("upload");
 })
 
 
